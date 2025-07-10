@@ -9,7 +9,6 @@ interface PageProps {
   searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
