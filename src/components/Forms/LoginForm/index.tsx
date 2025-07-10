@@ -47,7 +47,7 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md max-w-sm w-full mx-auto mt-10">
+    <div className="bg-white p-8 rounded-lg shadow-md max-w-sm w-full mx-auto my-10">
       <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
         Please Log In
         <br />I will close my eyes!

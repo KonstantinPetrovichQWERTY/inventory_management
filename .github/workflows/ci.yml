@@ -19,17 +19,17 @@ jobs:
         uses: actions/setup-node@v4
 
       - name: Install dependencies
-        working-directory: ./super-duper-inventory-app
+        # working-directory: ./super-duper-inventory-app
         run: npm ci
 
       - name: Run ESLint
-        working-directory: ./super-duper-inventory-app
+        # working-directory: ./super-duper-inventory-app
         run: npm run lint
 
       - name: Check Prettier formatting
-        working-directory: ./super-duper-inventory-app
+        # working-directory: ./super-duper-inventory-app
         run: npm run format:check
 
       - name: Build project
-        working-directory: ./super-duper-inventory-app
+        # working-directory: ./super-duper-inventory-app
         run: npm run build

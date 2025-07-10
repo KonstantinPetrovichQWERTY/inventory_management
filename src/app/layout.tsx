@@ -84,7 +84,7 @@ export default function RootLayout({
             </nav>
           </header>
 
-          <main className="flex-grow container mx-auto p-4">{children}</main>
+          <main>{children}</main>
         </div>
       </body>
     </html>
