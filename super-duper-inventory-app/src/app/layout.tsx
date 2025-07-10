@@ -39,6 +39,7 @@ export default function RootLayout({
                 >
                   <img
                     src="/blue_logo.png"
+                    alt=""
                     className="h-fill w-15 rounded-4xl"
                   ></img>
                   <span className="text-xl font-bold group-hover:text-neutral-300 transition-colors duration-200 whitespace-nowrap">

@@ -25,6 +25,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
       <div className="w-full aspect-w-16 aspect-h-9 bg-gray-200">
         <img
           src={images[currentIndex]}
+          alt=""
           className="w-full h-full object-cover transition-opacity duration-500 ease-in-out"
         />
       </div>

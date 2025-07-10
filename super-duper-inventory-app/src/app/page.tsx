@@ -6,6 +6,7 @@ export default function HomePage() {
       <div className="hidden md:flex flex-1 items-center justify-center p-8 bg-blue-100 relative overflow-hidden">
         <img
           src="/shop.jpg"
+          alt="home"
           className="w-full h-1/2 rounded-2xl object-cover"
         />
         <div className="absolute inset-0 flex items-center justify-center p-4">

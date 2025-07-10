@@ -4,15 +4,13 @@ import { Product } from '@/types/Product';
 import DeleteProductButton from '@/components/Buttnos/DeleteButton';
 import { getProduct } from '@/services/productService';
 
-interface PageProps {
-  params: { id: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
-
 export async function generateMetadata({
   params,
-}: PageProps): Promise<Metadata> {
-  const product: Product = await getProduct(Number(params.id));
+}: {
+  params: { id: string };
+}): Promise<Metadata> {
+  const { id } = await params;
+  const product: Product = await getProduct(Number(id));
 
   return {
     title: product.title,
@@ -25,7 +23,7 @@ export default async function ProductDetailsPage({
 }: {
   params: { id: string };
 }) {
-  const { id } = params;
+  const { id } = await params;
   const product = await getProduct(Number(id));
 
   return (
