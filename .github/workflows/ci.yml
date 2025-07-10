@@ -29,3 +29,7 @@ jobs:
       - name: Check Prettier formatting
         working-directory: ./super-duper-inventory-app
         run: npm run format:check
+
+      - name: Build project
+        working-directory: ./super-duper-inventory-app
+        run: npm run build

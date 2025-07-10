@@ -4,12 +4,10 @@ import { Product } from '@/types/Product';
 import DeleteProductButton from '@/components/Buttnos/DeleteButton';
 import { getProduct } from '@/services/productService';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { id: string };
+export async function generateMetadata(props: {
+  params: Promise<{ id: number }>
 }): Promise<Metadata> {
-  const { id } = await params;
+  const { id } = await props.params;
   const product: Product = await getProduct(Number(id));
 
   return {
@@ -18,12 +16,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProductDetailsPage({
-  params,
-}: {
-  params: { id: string };
+export default async function ProductDetailsPage(props: {
+  params: Promise<{ id: number }>
 }) {
-  const { id } = await params;
+  const { id } = await props.params;
   const product = await getProduct(Number(id));
 
   return (

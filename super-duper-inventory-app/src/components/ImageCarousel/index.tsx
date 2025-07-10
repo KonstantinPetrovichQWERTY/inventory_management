@@ -17,7 +17,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
   };
 
   if (images.length === 0) {
-    return <div className="text-center text-gray-500">No images:(</div>;
+    return <div className="text-center text-gray-500">No images:/</div>;
   }
 
   return (
