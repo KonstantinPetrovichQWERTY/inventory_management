@@ -84,7 +84,7 @@ export default function RootLayout({
             </nav>
           </header>
 
-          <main>{children}</main>
+          <main className="flex flex-col min-h-screen">{children}</main>
         </div>
       </body>
     </html>

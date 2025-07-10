@@ -24,7 +24,7 @@ export default async function ProductsPage() {
             className="border p-4 rounded-lg shadow-md flex flex-col h-full"
           >
             <Link href={`/products/${product.id}`}>
-              <div className="w-full aspect-w-4 aspect-h-3 overflow-hidden rounded-lg mb-4 flex-shrink-0">
+              <div className="w-fill aspect-w-4 aspect-h-3 overflow-hidden rounded-lg mb-4 flex-shrink-0">
                 <img
                   src={product.image}
                   alt={product.title}

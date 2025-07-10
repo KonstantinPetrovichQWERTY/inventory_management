@@ -2,7 +2,7 @@ import LoginForm from '@/components/Forms/LoginForm';
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen">
+    <div className="flex min-h-screen">
       <div className="hidden md:flex flex-1 items-center justify-center px-8 bg-blue-100 relative overflow-hidden">
         <img
           src="/shop.jpg"
@@ -33,6 +33,6 @@ export default function HomePage() {
           <LoginForm />
         </div>
       </div>
-    </main>
+    </div>
   );
 }
