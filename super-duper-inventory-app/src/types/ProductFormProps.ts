@@ -1,4 +1,4 @@
-import { ProductFormInputs } from "@/schemas/productSchema";
+import { ProductFormInputs } from '@/schemas/productSchema';
 
 export interface ProductFormProps {
   initialData?: ProductFormInputs;

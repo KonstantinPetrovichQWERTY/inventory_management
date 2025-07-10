@@ -49,12 +49,17 @@ export default function LoginForm() {
   return (
     <div className="bg-white p-8 rounded-lg shadow-md max-w-sm w-full mx-auto mt-10">
       <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
-        Please Log In<br/>
-        I will close my eyes!
+        Please Log In
+        <br />I will close my eyes!
       </h2>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email:</label>
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Email:
+          </label>
           <input
             type="email"
             id="email"
@@ -62,15 +67,26 @@ export default function LoginForm() {
             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
             disabled={loading}
           />
-          {errors.username && <p className="text-red-500 text-xs mt-1">{errors.username.message}</p>}
+          {errors.username && (
+            <p className="text-red-500 text-xs mt-1">
+              {errors.username.message}
+            </p>
+          )}
         </div>
 
         {error && (
-          <p className="text-red-600 text-sm text-center bg-red-100 p-2 rounded">{error}</p>
+          <p className="text-red-600 text-sm text-center bg-red-100 p-2 rounded">
+            {error}
+          </p>
         )}
 
         <div>
-          <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password:</label>
+          <label
+            htmlFor="password"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Password:
+          </label>
           <input
             type="password"
             id="password"
@@ -78,7 +94,11 @@ export default function LoginForm() {
             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
             disabled={loading}
           />
-          {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password.message}</p>}
+          {errors.password && (
+            <p className="text-red-500 text-xs mt-1">
+              {errors.password.message}
+            </p>
+          )}
         </div>
 
         <button
@@ -90,7 +110,10 @@ export default function LoginForm() {
         </button>
       </form>
       <p className="text-center text-sm text-gray-500 mt-4">
-        Do not have an account? <a href="#" className="text-blue-600 hover:underline">Push me</a>
+        Do not have an account?{' '}
+        <a href="#" className="text-blue-600 hover:underline">
+          Push me
+        </a>
       </p>
     </div>
   );

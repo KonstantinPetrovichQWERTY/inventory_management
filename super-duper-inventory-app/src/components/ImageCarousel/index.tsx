@@ -11,7 +11,9 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
   };
 
   const goToPrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length,
+    );
   };
 
   if (images.length === 0) {
@@ -29,13 +31,41 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
 
       <button
         onClick={goToPrev}
-        className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 bg-opacity-50 text-white p-2 rounded-full">
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
+        className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 bg-opacity-50 text-white p-2 rounded-full"
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M15 19l-7-7 7-7"
+          ></path>
+        </svg>
       </button>
       <button
         onClick={goToNext}
-        className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 bg-opacity-50 text-white p-2 rounded-full">
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+        className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 bg-opacity-50 text-white p-2 rounded-full"
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M9 5l7 7-7 7"
+          ></path>
+        </svg>
       </button>
 
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">

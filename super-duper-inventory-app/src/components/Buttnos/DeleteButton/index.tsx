@@ -4,8 +4,7 @@ import { deleteProduct } from '@/services/productService';
 import { ProductIdProps } from '@/types/ProductIdProps';
 import { useRouter } from 'next/navigation';
 
-
-export default function DeleteProductButton({productId}: ProductIdProps) {
+export default function DeleteProductButton({ productId }: ProductIdProps) {
   const router = useRouter();
 
   const handleDelete = async () => {
@@ -13,13 +12,15 @@ export default function DeleteProductButton({productId}: ProductIdProps) {
       return;
     }
     try {
-      await deleteProduct(productId)
+      await deleteProduct(productId);
       alert('Product is deleted!');
 
       router.push('/products');
       router.refresh();
     } catch (error) {
-      alert(`Something goes wrong: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      alert(
+        `Something goes wrong: ${error instanceof Error ? error.message : 'Unknown error'}`,
+      );
     }
   };
 
