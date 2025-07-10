@@ -5,7 +5,7 @@ import DeleteProductButton from '@/components/Buttnos/DeleteButton';
 import { getProduct } from '@/services/productService';
 
 export async function generateMetadata(props: {
-  params: Promise<{ id: number }>
+  params: Promise<{ id: number }>;
 }): Promise<Metadata> {
   const { id } = await props.params;
   const product: Product = await getProduct(Number(id));
@@ -17,7 +17,7 @@ export async function generateMetadata(props: {
 }
 
 export default async function ProductDetailsPage(props: {
-  params: Promise<{ id: number }>
+  params: Promise<{ id: number }>;
 }) {
   const { id } = await props.params;
   const product = await getProduct(Number(id));
